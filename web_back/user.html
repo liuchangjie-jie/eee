@@ -43,8 +43,11 @@
                 <div class="form-group">
                     <label for="inputPassword3" class="col-sm-2 control-label">用户图标：</label>
                     <div class="col-sm-10">
-                        <img src="images/2.jpg" alt="" class="user_pic">
-                        <input type="file" id="exampleInputFile">
+                        <img src="images/2.jpg" alt="" class="user_pic"><br>
+                        <label for="exampleInputFile">
+                            <img src="./images/4405.jpg" alt="">
+                        </label>
+                        <input style="display: none" type="file" name="userPic" id="exampleInputFile">
                     </div>
                 </div>
 
@@ -80,7 +83,7 @@
                     for (var key in backData.data) {
                         $('input.' + key).val(backData.data[key]);
                     }
-                    $('img.user_pic').attr('scr', backData.data.userPic);
+                    $('img.user_pic').attr('src', backData.data.userPic);
                 }
             });
             $('.btn-edit').on('click', function (e) {
@@ -105,9 +108,9 @@
                             });
                         }
                     }
-                })
+                });
 
-            })
+            });
 
         });
     </script>
